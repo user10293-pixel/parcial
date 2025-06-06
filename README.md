@@ -1,1 +1,2 @@
-# parcial
+# PARCIAL - EXAMEN
+## ALUMNO: AYALA O. Zait

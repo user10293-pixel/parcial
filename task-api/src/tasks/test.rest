@@ -1,0 +1,51 @@
+### RF01: Crear nueva tarea
+POST http://localhost:3000/tasks
+Content-Type: application/json
+
+{
+  "title": "Reunion con equipo",
+  "description": "Discutir nuevos proyectos",
+  "priority": "Alta",
+  "dueDate": "2023-12-20"
+}
+
+### RF02: Listar todas las tareas
+GET http://localhost:3000/tasks
+
+### RF03: Filtrar por estado (pendiente)
+GET http://localhost:3000/tasks/status/pendiente
+
+### RF03: Filtrar por estado (completada)
+GET http://localhost:3000/tasks/status/completada
+
+### RF04: Filtrar por fecha limite
+GET http://localhost:3000/tasks/limit/2023-12-20
+
+### RF05: Actualizar tarea
+PATCH http://localhost:3000/tasks/1
+Content-Type: application/json
+
+{
+  "title": "Reunion IMPORTANTISIMA con equipo",
+  "priority": "Alta"
+}
+
+### RF06: Cambiar estado
+PATCH http://localhost:3000/tasks/1/status
+Content-Type: application/json
+
+{
+  "status": "completada"
+}
+
+### RF07: Eliminar tarea
+DELETE http://localhost:3000/tasks/1
+
+### RF09: Filtrar por prioridad (Alta)
+GET http://localhost:3000/tasks/priority/Alta
+
+### RF09: Filtrar por prioridad (Media)
+GET http://localhost:3000/tasks/priority/Media
+
+### RF09: Filtrar por prioridad (Baja)
+GET http://localhost:3000/tasks/priority/Baja
